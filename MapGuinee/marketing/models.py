@@ -19,7 +19,7 @@ class EcolePartenaire(models.Model):
 
 # classe pour stocker les livres
 class Livres(models.Model):
-   
+    img_livre = models.ImageField(upload_to='media/img_livre',blank=True,null=True)
     titre = models.CharField(max_length=64)
     auteur = models.CharField(max_length=32)
     description = models.TextField()
@@ -35,7 +35,7 @@ class Documents(models.Model):
     titre_document = models.CharField(max_length= 32)
     contenu = models.TextField()
     image = models.ImageField(upload_to='media/img_doc',null=True,blank=True)
-    video = models.FileField(upload_to = 'media/video_doc')
+    video = models.FileField(upload_to = 'media/video_doc',null=True,blank=True)
     type_doc = models.ForeignKey(Categorie,on_delete = models.CASCADE)
 
     def __str__(self):

@@ -29,7 +29,7 @@
     <link href="{% static 'marketing/css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="{% static 'marketing/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'marketing/css/my_style.css' %}" rel="stylesheet">
     <link href="{% static 'marketing/css/style_perso.css' %}" rel="stylesheet">
 </head>
 
@@ -55,7 +55,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
                     <a href="{% url 'home' %}" class="nav-item nav-link active">Acceuil</a>
-                    <a href="#" class="nav-item nav-link">Marketing</a>
+                    <a href="{% url 'marketing' %}" class="nav-item nav-link">Marketing</a>
                     {% comment %} <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jobs</a>
                         <div class="dropdown-menu rounded-0 m-0">
